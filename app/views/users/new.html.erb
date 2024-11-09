@@ -1,0 +1,24 @@
+<h1>Create a New User</h1>
+
+<%= form_with(model: @user, local: true) do |form| %>
+  <div>
+    <%= form.label :username, "Your user name here" %>
+    <%= form.text_field :username, placeholder: "Enter your username", value: "default_username" %>
+  </div>
+
+  <div>
+    <%= form.label :email, "Email Address" %>
+    <%= form.email_field :email, placeholder: "example@example.com" %>
+  </div>
+
+  <div>
+    <%= form.label :password, "Password" %>
+    <%= form.password_field :password, placeholder: "Enter a secure password" %>
+  </div>
+
+  <div>
+    <%= form.submit "Create User" %>
+  </div>
+<% end %>
+
+
